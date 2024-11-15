@@ -55,7 +55,7 @@ internal-clean::
 
 ifneq ($(JAILBROKEN),1)
 before-all::
-    @if [[ ! -f $(UYOU_DEB) ]]; then \
+	@if [[ ! -f $(UYOU_DEB) ]]; then \
         rm -rf $(UYOU_PATH)/*; \
         $(PRINT_FORMAT_BLUE) "Downloading uYou"; \
         curl -L -s https://repo.miro92.com/debs/com.miro.uyou_$(UYOU_VERSION)_iphoneos-arm.deb -o $(UYOU_DEB) || exit 1; \
